@@ -17,7 +17,8 @@ function App() {
     prism.highlightAll();
   })
   async function reviewCode() {
-    const response = await axios.post('http://localhost:3000/ai/get-review', { code });
+    // http://localhost:3000/ai/get-review
+    const response = await axios.post('https://qwszqzbcx7.execute-api.ap-south-1.amazonaws.com/ai/get-review', { code });
     setReview(response.data);
   }
   return (
